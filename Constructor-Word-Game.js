@@ -4,16 +4,16 @@ var Word = require("./Word.js");
 var figlet = require('figlet');
 var chalk = require('chalk');
 
-var guesses = 10;
+var guesses = 20;
 var points = 0;
 
-var wordsToGuess = ["Don't Speak", "I'm Just a Girl", "It's My Life", "Spiderwebs", "Hey Baby", "Tragic Kingdom", "Ex-Girlfriend", "Simple Kind Of Life", "New", "Trapped In A Box", "Rock Steady"];
+var wordsToGuess = ["Who is Justice Beaver?", "I want people to be afraid of how much they love me.", "Where are the turtles?!", "Dwight, you ignorant slut!", "Sorry I annoyed you with my friendship.", "That's what she said.", "I declare bankruptcy!", "Why are you the way that you are?", "The worst thing about prison was… the dementors!", "Rock Steady"];
 var randomWord;
 var chosenWord;
 
 function startGame() {
 
-    console.log(chalk.blue("It's time to guess the 'No Doubt' songs!"));
+    console.log(chalk.blue("It's time to guess some 'The Office' quotes!"));
 }
 
 function chooseRandomWord() {
@@ -64,7 +64,7 @@ function guessWord() {
                 points++;
 
                 if (points < 5) {
-                    console.log(chalk.green("CORRECT! Next song!"));
+                    console.log(chalk.green("CORRECT! Next quote!"));
                     chooseRandomWord();
                 }
 
@@ -102,7 +102,7 @@ function loseGame() {
                 guessWord();
             }
             else {
-                console.log(chalk.blue("K fine.. 'DON'T SPEAK' to me ever again! lolzzzz"));
+                console.log(chalk.blue("Who said this quote??!?!!"));
                 process.exit();
             }
         })
@@ -136,7 +136,7 @@ function winGame() {
                 guessWord();
             }
             else {
-                console.log(chalk.blue("K fine.. It's YOUR life."))
+                console.log(chalk.blue("Occasionally, I'll hit somebody with my car. So sue me!!"))
                 process.exit();
             }
         })
